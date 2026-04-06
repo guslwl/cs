@@ -6,7 +6,22 @@
 
 #include<stdio.h>
 
+void parOuImpar(int number);
+
 int main()
 {
+    parOuImpar(3);
+    parOuImpar(6);
+    parOuImpar(9);
+    parOuImpar(7);
     return 0;
+}
+
+void parOuImpar(int number){
+    if (number % 2 == 0) {
+        printf("par"); // even
+    }
+    else {
+        printf("impar"); // odd
+    }
 }

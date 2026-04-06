@@ -11,5 +11,25 @@
 
 int main()
 {
+    int number, timesToIncrement;
+    char character;
+
+    printf("Type a number: ");
+    scanf("%d", &number);
+
+    printf("Type a char: ");
+    scanf("%c", &character);
+
+    printf("Times to increment: ");
+    scanf("%d", &timesToIncrement);
+
+    for (int i=0; i < timesToIncrement; i++)
+    {
+        number++;
+        character++;
+    }
+
+    printf("New values:\n\tnumber: %d\n\tchar: %c", number, character);
+
     return 0;
 }

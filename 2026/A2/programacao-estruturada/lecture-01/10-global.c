@@ -8,7 +8,17 @@
 
 #include<stdio.h>
 
+int GLOBAL_INT;
+
+void setGlobalInt(int value);
+
 int main()
 {
+    setGlobalInt(42);
+    printf("The value of the global variable is: %d\n", GLOBAL_INT);
     return 0;
+}
+
+void setGlobalInt(int value){
+    GLOBAL_INT = value;
 }

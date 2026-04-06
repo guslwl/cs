@@ -10,7 +10,30 @@
 
 #include<stdio.h>
 
+void declareStaticVariable();
+void declareAutomaticVariable();
+
 int main()
 {
+    declareStaticVariable();
+    declareStaticVariable();
+    declareStaticVariable();
+
+    declareAutomaticVariable();
+    declareAutomaticVariable();
+    declareAutomaticVariable();
+
     return 0;
+}
+
+void declareStaticVariable(){
+    static int staticInt = 0; // This variable retains its value between function calls
+    staticInt++;
+    printf("The value of the static variable is: %d\n", staticInt);
+}
+
+void declareAutomaticVariable(){
+    int automaticInt = 0; // This variable is reinitialized every time the function is called
+    automaticInt++;
+    printf("The value of the automatic variable is: %d\n", automaticInt);
 }

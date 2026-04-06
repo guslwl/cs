@@ -8,5 +8,15 @@
 
 int main()
 {
+    int num;
+
+    printf("Type a number: ");
+    scanf("%d", &num);
+
+    printf("--- MULTIP. TABLE OF %d ---\n", num);
+    for (int i = 0; i <= 10; i++)
+    {
+        printf("\t%d x %d = %d\n", num, i, (num * i));
+    }
     return 0;
 }

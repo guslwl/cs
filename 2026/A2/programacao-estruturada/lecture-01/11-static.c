@@ -8,7 +8,19 @@
 
 #include<stdio.h>
 
+void incrementAndPrintStatic();
+
 int main()
 {
+    incrementAndPrintStatic();
+    incrementAndPrintStatic();
+    incrementAndPrintStatic();
+
     return 0;
+}
+
+void incrementAndPrintStatic(){
+    static int staticInt = 0; // This variable retains its value between function calls
+    staticInt++;
+    printf("The value of the static variable is: %d\n", staticInt);
 }
